@@ -1,0 +1,15 @@
+<nav>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon" onclick="toggleMenu()">&#9776;</label>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <!-- The following Displays Login or Logout depending of login status-->
+        <% if (!isAuthenticated) { %>
+            <li><a href="/login">Login</a></li>
+        <% } else { %>
+            <li><a href="/logout">Logout</a></li>
+        <% } %>
+    </ul>
+</nav>
